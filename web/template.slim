@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html lang="en"
+  head
+    meta charset="UTF-8"/
+    meta name="viewport" content="width=device-width, initial-scale=1.0"/
+    title Document
+
+    link rel="preconnect" href="https://fonts.googleapis.com"
+    link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=true
+    link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"
+
+    style
+      = File.read("web/tw.css")
+
+  body.flex.flex-col.font-archivo class="w-[1200px] h-[1600px]"
+    .w-full.p-4.flex.flex-row.items-end.gap-4
+      .flex.flex-col
+        .text-xl MONDAY
+        .text-3xl.font-bold 21 SEPTEMBER
+      
+      .ml-auto.flex.flex-row.align-end.gap-4
+        .flex.flex-col.gap-2
+          .text-xl SUNRISE 06:52
+          .text-xl SUNSET 19:24
+        
+        .p-4.bg-yellow.border-2.border-solid.border-black
+          span.text-2xl.font-bold 18
+          span.font-bold °C
+      
+    .w-full.h-1.bg-black

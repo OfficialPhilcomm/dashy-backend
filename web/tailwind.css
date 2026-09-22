@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --font-archivo: Archivo, sans-serif;
+
+  --color-red: red;
+  --color-yellow: rgb(232 180 42);
+  --color-green: green;
+  --color-blue: blue;
+}

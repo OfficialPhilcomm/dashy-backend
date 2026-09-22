@@ -1,5 +1,6 @@
 require "tempfile"
 require "ferrum"
+require_relative "lib/dashboard"
 
 SETTINGS = {
   browser_options: {
@@ -15,7 +16,7 @@ VIEWPORT = { width: 1600, height: 1200, scale_factor: 1 }.freeze
 
 map "/content" do |env|
   run do |env|
-    [200, {'Content-Type' => 'text/plain'}, ['Hello, World!']]
+    [200, {'Content-Type' => 'text/html'}, [Dashboard.new.render]]
   end
 end
 
