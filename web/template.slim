@@ -17,14 +17,33 @@ html lang="en"
       .flex.flex-col
         .text-xl MONDAY
         .text-3xl.font-bold 21 SEPTEMBER
-      
+
       .ml-auto.flex.flex-row.align-end.gap-4
         .flex.flex-col.gap-2
           .text-xl SUNRISE 06:52
           .text-xl SUNSET 19:24
-        
+
         .p-4.bg-yellow.border-2.border-solid.border-black
           span.text-2xl.font-bold 18
           span.font-bold °C
-      
+
     .w-full.h-1.bg-black
+
+    - if events.is_a? String
+      .text-xl = events
+
+    - else
+      .p-4.flex.flex-col.gap-4
+        - if events.none?
+          .text-xl No events today
+
+        - events.each do |event|
+          .w-full.max-w-xl.mx-auto.px-4.py-2.flex.flex-row.gap-4.rounded-md style="background-color: #{event.color}"
+            .flex.flex-col
+              .text-lg = event.name
+              .text-sm
+                = event.start
+                |<> to
+                = event.end
+                |<> •
+                = event.calendar_name
